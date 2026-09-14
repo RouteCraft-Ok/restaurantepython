@@ -19,8 +19,8 @@
       "destination": "/api/index.py"
     },
     {
-      "source": "/((?!api/).*)",
-      "destination": "/FRONTEND/dist/$1"
+      "source": "/(.*)",
+      "destination": "/FRONTEND/dist/index.html"
     }
   ]
 }
