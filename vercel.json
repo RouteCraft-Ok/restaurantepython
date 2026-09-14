@@ -1,34 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "FRONTEND/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/FRONTEND/dist/assets/$1"
-    },
-    {
-      "src": "/(.*\\.(ico|png|jpg|svg|css|js|json))",
-      "dest": "/FRONTEND/dist/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/FRONTEND/dist/index.html"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.py" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
