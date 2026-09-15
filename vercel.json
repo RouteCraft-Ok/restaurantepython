@@ -9,8 +9,7 @@
       "src": "FRONTEND/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
-        "zeroConfig": true
+        "distDir": "dist"
       }
     }
   ],
