@@ -1,0 +1,14 @@
+/* App.css */
+/*@import "./Global.css";
+@import "./Landing.css";
+@import "./ExplorarPage.css";*/
+.app-container {
+  padding-top: 50px; /* Para móviles (como ya lo dejaste bien) */
+}
+
+/* En pantallas grandes (desktop), como hay doble barra, necesita más espacio */
+@media (min-width: 1025px) {
+  .app-container {
+    padding-top: 100px; /* Ajusta este valor si necesitas 10px más o menos */
+  }
+}

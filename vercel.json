@@ -2,6 +2,12 @@
   "version": 2,
   "buildCommand": "cd FRONTEND && npm install && npm run build",
   "outputDirectory": "FRONTEND/dist",
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
